@@ -1,0 +1,211 @@
+client-index : endpoint define  main { view: 'app.html',
+  css: [ 'libs', 'app.styl' ],
+  code: [ 'libs/1.jquery.min.js', 'app' ],
+  tmpl: [ 'chat' ] }
+client-index : endpoint define  solana { view: 'solana.html',
+  css: [ 'libs', 'solana.styl' ],
+  code: [ 'libs', 'solana' ],
+  tmpl: [ '*' ] }
+client-index : endpoint define  api { view: 'app.html',
+  css: [ 'libs', 'app.styl' ],
+  code: [ 'libs', 'main' ],
+  tmpl: [ '*' ] }
+client-index : endpoint define  todos { view: 'todos.html',
+  css: [ 'libs', 'todos.css' ],
+  code: [ 'libs', 'todos' ],
+  tmpl: [] }
+client-index : endpoint define  contacts { view: 'contacts.html',
+  css: [ 'libs', 'contacts.css' ],
+  code: [ 'libs', 'contacts' ],
+  tmpl: [] }
+open mongo connection...
+[32mStarting SocketStream 0.3.0RC2 in development mode...[39m
+info: socket.io started
+
+client-index-load: ss.client.templateEngines.load...packedAsset : true
+client-pack: constructor : /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets/main
+[33mPre-packing and minifying the 'main' client...[39m
+[32m✓[39m 3 previous packaged files deleted
+
+packAssetSet :  libs/reset.css
+packAssetSet :  libs/style.css
+packAssetSet :  app.styl
+
+asset-css: load css :  libs/reset.css
+asset-css: load css :  libs/style.css
+asset-css: load css :  app.styl
+[90m  Minified CSS from 7.375 KB to 5.828 KB[39m
+[32m✓[39m Packed 3 files into /client/static/assets/main/1342991436590.css
+[32m✓[39m Packed 3 files into /client/static/assets/main/1342991436590.css
+packAssetSet :  libs/1.jquery.min.js
+packAssetSet :  app/app.js
+packAssetSet :  app/entry.js
+asset-wrapCode :  libs/1.jquery.min.js  :  libs/1.jquery.min.js
+[90m  Minified libs/1.jquery.min.js from 91.815 KB to 91.444 KB[39m
+asset-js: load js :  libs/1.jquery.min.js
+asset-wrapCode :  app/app.js  :  app
+[90m  Minified app/app.js from 1.543 KB to 0.606 KB[39m
+asset-js: load js :  app/app.js
+asset-wrapCode :  app/entry.js  :  app
+[90m  Minified app/entry.js from 0.578 KB to 0.283 KB[39m
+asset-js: load js :  app/entry.js
+[32m✓[39m Packed 3 files into /client/static/assets/main/1342991436590.js
+[32m✓[39m Packed 3 files into /client/static/assets/main/1342991436590.js
+view : resolveAssetLink : /assets/main/1342991436590.css
+view : resolveAssetLink : /assets/main/1342991436590.js
+asset-html: load html :  app.html
+[32m✓[39m Created and cached HTML file /client/static/assets/main/1342991436590.html
+[32m✓[39m Created and cached HTML file /client/static/assets/main/1342991436590.html
+client-pack: constructor : /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets/solana
+[33mPre-packing and minifying the 'solana' client...[39m
+[32m✓[39m 3 previous packaged files deleted
+packAssetSet :  libs/reset.css
+packAssetSet :  libs/style.css
+packAssetSet :  solana.styl
+asset-css: load css :  libs/reset.css
+asset-css: load css :  libs/style.css
+asset-css: load css :  solana.styl
+[90m  Minified CSS from 6.513 KB to 5.005 KB[39m
+[32m✓[39m Packed 3 files into /client/static/assets/solana/1342991436591.css
+[32m✓[39m Packed 3 files into /client/static/assets/solana/1342991436591.css
+packAssetSet :  libs/1.jquery.min.js
+packAssetSet :  libs/2.ember.min.js
+packAssetSet :  libs/3.bootstrap-dropdown.js
+packAssetSet :  solana/app.coffee
+packAssetSet :  solana/entry.js
+asset-wrapCode :  libs/1.jquery.min.js  :  libs
+[90m  Minified libs/1.jquery.min.js from 91.815 KB to 91.444 KB[39m
+asset-js: load js :  libs/1.jquery.min.js
+asset-wrapCode :  libs/2.ember.min.js  :  libs
+[90m  Minified libs/2.ember.min.js from 135.801 KB to 135.349 KB[39m
+asset-js: load js :  libs/2.ember.min.js
+asset-wrapCode :  libs/3.bootstrap-dropdown.js  :  libs
+[90m  Minified libs/3.bootstrap-dropdown.js from 1.634 KB to 0.425 KB[39m
+asset-js: load js :  libs/3.bootstrap-dropdown.js
+asset-wrapCode :  solana/app.coffee  :  solana
+[90m  Minified solana/app.coffee from 7.152 KB to 4.721 KB[39m
+asset-js: load js :  solana/app.coffee
+asset-wrapCode :  solana/entry.js  :  solana
+[90m  Minified solana/entry.js from 1.073 KB to 0.651 KB[39m
+asset-js: load js :  solana/entry.js
+[32m✓[39m Packed 5 files into /client/static/assets/solana/1342991436591.js
+[32m✓[39m Packed 5 files into /client/static/assets/solana/1342991436591.js
+view : resolveAssetLink : /assets/solana/1342991436591.css
+view : resolveAssetLink : /assets/solana/1342991436591.js
+asset-html: load html :  solana.html
+[32m✓[39m Created and cached HTML file /client/static/assets/solana/1342991436591.html
+[32m✓[39m Created and cached HTML file /client/static/assets/solana/1342991436591.html
+client-pack: constructor : /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets/api
+[33mPre-packing and minifying the 'api' client...[39m
+[32m✓[39m 3 previous packaged files deleted
+packAssetSet :  libs/reset.css
+packAssetSet :  libs/style.css
+packAssetSet :  app.styl
+asset-css: load css :  libs/reset.css
+asset-css: load css :  libs/style.css
+asset-css: load css :  app.styl
+[90m  Minified CSS from 7.375 KB to 5.828 KB[39m
+[32m✓[39m Packed 3 files into /client/static/assets/api/1342991436591.css
+[32m✓[39m Packed 3 files into /client/static/assets/api/1342991436591.css
+packAssetSet :  libs/1.jquery.min.js
+packAssetSet :  libs/2.ember.min.js
+packAssetSet :  libs/3.bootstrap-dropdown.js
+asset-wrapCode :  libs/1.jquery.min.js  :  libs
+[90m  Minified libs/1.jquery.min.js from 91.815 KB to 91.444 KB[39m
+asset-js: load js :  libs/1.jquery.min.js
+asset-wrapCode :  libs/2.ember.min.js  :  libs
+[90m  Minified libs/2.ember.min.js from 135.801 KB to 135.349 KB[39m
+asset-js: load js :  libs/2.ember.min.js
+asset-wrapCode :  libs/3.bootstrap-dropdown.js  :  libs
+[90m  Minified libs/3.bootstrap-dropdown.js from 1.634 KB to 0.425 KB[39m
+asset-js: load js :  libs/3.bootstrap-dropdown.js
+[32m✓[39m Packed 3 files into /client/static/assets/api/1342991436591.js
+[32m✓[39m Packed 3 files into /client/static/assets/api/1342991436591.js
+view : resolveAssetLink : /assets/api/1342991436591.css
+view : resolveAssetLink : /assets/api/1342991436591.js
+asset-html: load html :  app.html
+[32m✓[39m Created and cached HTML file /client/static/assets/api/1342991436591.html
+[32m✓[39m Created and cached HTML file /client/static/assets/api/1342991436591.html
+client-pack: constructor : /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets/todos
+[33mPre-packing and minifying the 'todos' client...[39m
+[32m✓[39m 3 previous packaged files deleted
+packAssetSet :  libs/reset.css
+packAssetSet :  libs/style.css
+packAssetSet :  todos.css
+asset-css: load css :  libs/reset.css
+asset-css: load css :  libs/style.css
+asset-css: load css :  todos.css
+[90m  Minified CSS from 13.349 KB to 10.439 KB[39m
+[32m✓[39m Packed 3 files into /client/static/assets/todos/1342991436591.css
+[32m✓[39m Packed 3 files into /client/static/assets/todos/1342991436591.css
+packAssetSet :  libs/1.jquery.min.js
+packAssetSet :  libs/2.ember.min.js
+packAssetSet :  libs/3.bootstrap-dropdown.js
+packAssetSet :  todos/app.js
+packAssetSet :  todos/entry.js
+asset-wrapCode :  libs/1.jquery.min.js  :  libs
+[90m  Minified libs/1.jquery.min.js from 91.815 KB to 91.444 KB[39m
+asset-js: load js :  libs/1.jquery.min.js
+asset-wrapCode :  libs/2.ember.min.js  :  libs
+[90m  Minified libs/2.ember.min.js from 135.801 KB to 135.349 KB[39m
+asset-js: load js :  libs/2.ember.min.js
+asset-wrapCode :  libs/3.bootstrap-dropdown.js  :  libs
+[90m  Minified libs/3.bootstrap-dropdown.js from 1.634 KB to 0.425 KB[39m
+asset-js: load js :  libs/3.bootstrap-dropdown.js
+asset-wrapCode :  todos/app.js  :  todos
+[90m  Minified todos/app.js from 2.271 KB to 1.116 KB[39m
+asset-js: load js :  todos/app.js
+asset-wrapCode :  todos/entry.js  :  todos
+[90m  Minified todos/entry.js from 1.339 KB to 0.749 KB[39m
+asset-js: load js :  todos/entry.js
+[32m✓[39m Packed 5 files into /client/static/assets/todos/1342991436591.js
+[32m✓[39m Packed 5 files into /client/static/assets/todos/1342991436591.js
+view : resolveAssetLink : /assets/todos/1342991436591.css
+view : resolveAssetLink : /assets/todos/1342991436591.js
+asset-html: load html :  todos.html
+[32m✓[39m Created and cached HTML file /client/static/assets/todos/1342991436591.html
+[32m✓[39m Created and cached HTML file /client/static/assets/todos/1342991436591.html
+client-pack: constructor : /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets /Users/e51141/macsrc/nodejs/mysrc/solana/ss03/client/static/assets/contacts
+[33mPre-packing and minifying the 'contacts' client...[39m
+[32m✓[39m 3 previous packaged files deleted
+packAssetSet :  libs/reset.css
+packAssetSet :  libs/style.css
+packAssetSet :  contacts.css
+asset-css: load css :  libs/reset.css
+asset-css: load css :  libs/style.css
+asset-css: load css :  contacts.css
+[90m  Minified CSS from 8.144 KB to 6.039 KB[39m
+[32m✓[39m Packed 3 files into /client/static/assets/contacts/1342991436592.css
+[32m✓[39m Packed 3 files into /client/static/assets/contacts/1342991436592.css
+packAssetSet :  libs/1.jquery.min.js
+packAssetSet :  libs/2.ember.min.js
+packAssetSet :  libs/3.bootstrap-dropdown.js
+packAssetSet :  contacts/app.js
+packAssetSet :  contacts/entry.js
+asset-wrapCode :  libs/1.jquery.min.js  :  libs
+[90m  Minified libs/1.jquery.min.js from 91.815 KB to 91.444 KB[39m
+asset-js: load js :  libs/1.jquery.min.js
+asset-wrapCode :  libs/2.ember.min.js  :  libs
+[90m  Minified libs/2.ember.min.js from 135.801 KB to 135.349 KB[39m
+asset-js: load js :  libs/2.ember.min.js
+asset-wrapCode :  libs/3.bootstrap-dropdown.js  :  libs
+[90m  Minified libs/3.bootstrap-dropdown.js from 1.634 KB to 0.425 KB[39m
+asset-js: load js :  libs/3.bootstrap-dropdown.js
+asset-wrapCode :  contacts/app.js  :  contacts
+[90m  Minified contacts/app.js from 7.728 KB to 4.106 KB[39m
+asset-js: load js :  contacts/app.js
+asset-wrapCode :  contacts/entry.js  :  contacts
+[90m  Minified contacts/entry.js from 1.339 KB to 0.749 KB[39m
+asset-js: load js :  contacts/entry.js
+[32m✓[39m Packed 5 files into /client/static/assets/contacts/1342991436592.js
+[32m✓[39m Packed 5 files into /client/static/assets/contacts/1342991436592.js
+view : resolveAssetLink : /assets/contacts/1342991436592.css
+view : resolveAssetLink : /assets/contacts/1342991436592.js
+asset-html: load html :  contacts.html
+[32m✓[39m Created and cached HTML file /client/static/assets/contacts/1342991436592.html
+[32m✓[39m Created and cached HTML file /client/static/assets/contacts/1342991436592.html
+mongo db opened, err= { [Error: connect ECONNREFUSED]
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect' }
+ss.env : development

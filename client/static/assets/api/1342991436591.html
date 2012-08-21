@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="/assets/api/1342991436591.css" media="screen" rel="stylesheet" type="text/css"><script src="/assets/api/1342991436591.js" type="text/javascript"></script><script type="text/x-handlebars" data-template-name="chat-message"><p>
+  <span class="time">{{time}}</span>
+  <span class="message">{{message}}</span>
+</p>
+</script><script type="text/x-handlebars" data-template-name="todos-tasks">{{view Todos.CreateTodoView id="new-todo" placeholder="What needs to be done?"}}
+
+<!-- Insert this after the CreateTodoView and before the collection. -->
+{{#view Todos.StatsView id="stats"}}
+  {{#view Em.Button classBinding="isActive"
+    target="Todos.todosController"
+    action="clearCompletedTodos"}}
+    Clear Completed Todos
+  {{/view}}
+  {{remainingString}} remaining
+{{/view}}
+
+{{view Em.Checkbox class="mark-all-done"
+  title="Mark All as Done"
+  valueBinding="Todos.todosController.allAreDone"}}
+
+{{#collection contentBinding="Todos.todosController" tagName="ul" itemClassBinding="content.isDone"}}
+  {{view Em.Checkbox titleBinding="content.title"
+  valueBinding="content.isDone"}}
+{{/collection}}
+</script>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div id="content">
+      <a href="https://github.com/socketstream/socketstream">
+        <img src="/images/logo.png" alt="SocketStream Logo" width="160" height="160">
+      </a>
+      <h1>Welcome to your new realtime app!</h1>
+
+      <!-- QUICK CHAT DEMO-->
+      <form id="demo" onsubmit="return false">
+        <h3>Quick Chat Demo</h3>
+        <h5>Open this page in multiple tabs or browsers and type a message below</h5>
+        <div id="chatlog"></div>
+        <input id="myMessage" type="text" autocomplete="off">
+      </form>
+    </div>
+  </body>
+</html>
